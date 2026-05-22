@@ -196,3 +196,16 @@ const observerScroll = new IntersectionObserver((entries) => {
 document.querySelectorAll('.requirement, .card-container').forEach(el => {
   observerScroll.observe(el);
 });
+
+// Navbar scroll
+const navbar = document.querySelector('.navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// Menu mobile
+const toggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelector('.nav-links');
+toggle.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+});
