@@ -61,97 +61,135 @@ canvas {
   }
 }
 
-/* Aplica a animação à imagem */
-.logo-girando {
-  width: 2rem;
-  animation: girar 5s linear infinite;
-}
+
 
 /* Hero Section (tudo fica acima do fundo)*/
 .hero {
-  min-height: 100vh;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   padding: 1rem;
   position: relative;
   z-index: 1;
+  max-width: 100%;
 }
 
 .hero h1 {
   font-family: "Nova Oval", system-ui;
-  font-size: clamp(3rem, 10vw, 13rem);
+  font-size: 3rem;
   color: #FAF3D1;
-  text-shadow:
-    0 0 10px rgba(255, 255, 255, 0.8),
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
     0 0 20px rgba(255, 255, 255, 0.6),
     0 0 30px rgba(255, 255, 255, 0.4);
+  max-width: 100%;
+  margin-top: 15rem;
 }
 
-.hero-subtitle {
-  font-family: 'Montserrat', sans-serif;
-  font-size: clamp(1.2rem, 3vw, 2rem);
-  font-weight: 600;
-  color: white;
-  margin-top: 1rem;
-}
-
-.hero-tagline {
-  font-size: clamp(0.85rem, 1.5vw, 1rem);
-  color: rgba(255, 255, 255, 0.6);
-  margin-top: 0.5rem;
+.hero p {
+  font-size: 1rem;
+  max-width: 100%;
+  margin-top: 5rem;
+  padding: 0 1rem;
 }
 
 /* Seção PUC Minas */
-.puc-section {
-  margin-top: 4rem;
+/* SOBRE */
+.sobre {
+  width: 100%;
+  max-width: 1200px;
+  padding: 6rem 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.sobre-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4rem;
+}
+
+.sobre-texto {
+  flex: 1;
+  text-align: left;
+}
+
+.sobre-texto h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  color: #FAF3D1;
+  margin-bottom: 1.5rem;
+}
+
+.sobre-texto h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #FAF3D1;
+  margin-bottom: 0.5rem;
+  margin-top: 1.2rem;
+}
+
+.sobre-texto p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.7;
+}
+
+.sobre-lista {
+  list-style: none;
+  margin: 1rem 0;
   display: flex;
   flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sobre-lista li {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.sobre-lista li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #FAF3D1;
+}
+
+.sobre-rodape {
+  margin-top: 1.2rem;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.sobre-imagem {
+  flex: 1;
+  display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0;
+}
+
+.sobre-imagem img {
   max-width: 100%;
-  margin-bottom: 5%;
-  margin-top: 30%;
-}
-
-.puc-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 100%;
-  padding: 0 20px;
-  text-align: center;
-}
-
-/* Logo + título */
-.puc-logo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-right: 0;
-  max-width: 6rem;
-}
-
-.puc-logo img {
-  max-width: 50px;
   height: auto;
+  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.15));
 }
 
-.puc-logo h2 {
-  margin-top: 10px;
-  font-size: 1.8rem;
-  color: white;
-}
+/* SOBRE - MOBILE */
+@media (max-width: 767px) {
+  .sobre-container {
+    flex-direction: column;
+  }
 
-/* Texto */
-.puc-text {
-  max-width: 100%;
-  font-size: 1rem;
-  line-height: 1.6;
-  color: white;
-  padding: 0 15px;
+  .sobre-imagem {
+    order: -1;
+  }
 }
 
 /* TRANSIÇÃO DO SCROLL*/
