@@ -249,64 +249,82 @@ canvas {
   border-radius: 1rem; /* Opcional: mantém o border-radius do pai */
 }
 
-.requirement {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  text-align: left;
-  gap: 1.5rem;
-  max-width: 100%;
-  padding: 1rem;
+/* HABILIDADES */
+.habilidades {
+  width: 100%;
+  max-width: 1200px;
+  padding: 6rem 2rem;
   position: relative;
-  margin: 0 1rem 2rem;
   z-index: 1;
-
-  /* Estado inicial para animação */
-  opacity: 0;
-  transform: translateX(100px);
-  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
-  will-change: transform, opacity;
 }
 
-.requirement.show {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.requirement-image {
-  width: 4rem;
-  height: auto;
-  object-fit: contain;
-}
-
-.requirement-text p {
+.habilidades-container {
   display: flex;
   flex-direction: column;
-  font-size: 1rem;
-  gap: 0.5rem;
+  align-items: center;
 }
 
-.requirement-header h1 {
-  font-size: 1.2rem;
+.section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 700;
+  color: #FAF3D1;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.habilidades-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.habilidade-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  transition: background 0.3s ease;
+}
+
+.habilidade-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.habilidade-icon {
+  font-size: 2.5rem;
+  color: #FAF3D1;
+}
+
+.habilidade-card h3 {
+  font-size: 1rem;
   font-weight: 600;
   color: #FAF3D1;
-  margin: 0;
 }
 
-.requirement p {
-  font-size: 1rem;
-  color: white;
-  margin: 0;
+.habilidade-card p {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
   line-height: 1.5;
 }
 
-.requirements-title h1 {
-  font-size: 1.6rem;
-  margin: 0, 3rem;
-  color: #FAF3D1;
-  margin-bottom: 1rem;
-  position: relative;
-  z-index: 1;
+/* MOBILE */
+@media (max-width: 767px) {
+  .habilidades-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .habilidades-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .navbar {

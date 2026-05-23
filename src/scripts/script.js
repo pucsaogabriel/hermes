@@ -209,3 +209,24 @@ const navLinks = document.querySelector('.nav-links');
 toggle.addEventListener('click', () => {
   navLinks.classList.toggle('open');
 });
+
+// Carrega habilidades do JSON
+fetch('src/db/data.json')
+  .then(res => res.json())
+  .then(data => {
+    const grid = document.getElementById('habilidades-grid');
+
+    data.habilidades.forEach(item => {
+      const card = document.createElement('div');
+      card.classList.add('habilidade-card', 'scroll-block');
+      card.innerHTML = `
+  <i class="${item.icone} habilidade-icon"></i>
+  <h3>${item.titulo}</h3>
+  <p>${item.descricao}</p>
+`;
+      grid.appendChild(card);
+
+      // registra no observer para animação de scroll
+      observer.observe(card);
+    });
+  });
