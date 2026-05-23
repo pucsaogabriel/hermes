@@ -69,35 +69,38 @@ canvas {
 
 /* Hero Section (tudo fica acima do fundo)*/
 .hero {
-  height: auto;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
   padding: 1rem;
   position: relative;
   z-index: 1;
-  max-width: 100%;
 }
 
 .hero h1 {
   font-family: "Nova Oval", system-ui;
-  font-size: 3rem;
+  font-size: clamp(3rem, 10vw, 13rem);
   color: #FAF3D1;
-  margin-bottom: 1rem;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+  text-shadow:
+    0 0 10px rgba(255, 255, 255, 0.8),
     0 0 20px rgba(255, 255, 255, 0.6),
     0 0 30px rgba(255, 255, 255, 0.4);
-  max-width: 100%;
-  margin-top: 15rem;
 }
 
-.hero p {
-  font-size: 1rem;
-  max-width: 100%;
-  margin-top: 5rem;
-  padding: 0 1rem;
+.hero-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  font-weight: 600;
+  color: white;
+  margin-top: 1rem;
+}
+
+.hero-tagline {
+  font-size: clamp(0.85rem, 1.5vw, 1rem);
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 0.5rem;
 }
 
 /* Seção PUC Minas */
