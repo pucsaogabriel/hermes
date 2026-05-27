@@ -1,3 +1,7 @@
+document.addEventListener('DOMContentLoaded', () => {
+  lucide.createIcons();
+});
+
 const canvas = document.getElementById("starfield");
 const ctx = canvas.getContext("2d");
 
@@ -230,3 +234,5 @@ fetch('src/db/data.json')
       observer.observe(card);
     });
   });
+
+ 
