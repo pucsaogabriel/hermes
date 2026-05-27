@@ -2,39 +2,39 @@
     "habilidades": [
         {
             "id": 1,
-            "titulo": "Amostra de Solo",
-            "descricao": "...",
-            "icone": "fa-solid fa-flask"
+            "titulo": "Modalidade Operacional",
+            "descricao": "Sistema desenvolvido para facilitar o transporte de ferramentas em ambientes técnicos e industriais.",
+            "icone": "truck"
         },
         {
             "id": 2,
-            "titulo": "Coleta Atmosférica",
-            "descricao": "...",
-            "icone": "fa-solid fa-wind"
+            "titulo": "Organização Inteligente",
+            "descricao": "Compartimentos planejados para melhorar o armazenamento e o acesso rápido aos equipamentos.",
+            "icone": "layout-dashboard"
         },
         {
             "id": 3,
-            "titulo": "Visão Computacional",
-            "descricao": "...",
-            "icone": "fa-solid fa-eye"
+            "titulo": "Gerenciamento de Ferramentas",
+            "descricao": "Possibilidade de controle e monitoramento das ferramentas utilizadas durante operações.",
+            "icone": "wrench"
         },
         {
             "id": 4,
-            "titulo": "Navegação Autônoma",
-            "descricao": "...",
-            "icone": "fa-solid fa-route"
+            "titulo": "Estrutura Adaptável",
+            "descricao": "Projeto com capacidade de adaptação para diferentes tipos de ferramentas e necessidades operacionais.",
+            "icone": "settings"
         },
         {
             "id": 5,
-            "titulo": "Comunicação",
-            "descricao": "...",
-            "icone": "fa-solid fa-satellite-dish"
+            "titulo": "Integração Tecnológica",
+            "descricao": "Base preparada para futuras implementações de sensores e sistemas automatizados.",
+            "icone": "cpu"
         },
         {
             "id": 6,
-            "titulo": "Telemetria",
-            "descricao": "...",
-            "icone": "fa-solid fa-chart-line"
+            "titulo": "Suporte à Manutenção",
+            "descricao": "Auxílio direto às equipes técnicas, reduzindo tempo operacional e aumentando a produtividade.",
+            "icone": "toolbox"
         }
     ]
 }
