@@ -5,8 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>H.E.R.M.E.S</title>
+<<<<<<< HEAD
+  <link rel="stylesheet" href="src/assets/css/styles.css">
+=======
   <script src="https://unpkg.com/lucide@latest"></script>
   <link rel="stylesheet" href="src\assets\css\styles.css">
+>>>>>>> main
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nova+Oval&display=swap" rel="stylesheet">
@@ -129,26 +133,162 @@
     </div>
   </section>
 
+    <!--diario de bordo-->
   <section id="diario" class="diario">
-    <!--adicionar diario de bordo-->
+    <h2>Diário de Bordo e Atualizações</h2>
+  <div class="cards-container">
+    <article class="card-diario">
+      <span class="card-data">Data: 15 Out 2024</span>
+      <h3>Telemetria de rover recebida com sucesso</h3>
+      <p>Nossa equipe validou o primeiro lote de dados de telemetria enviados pelo sistema embarcado, confirmando a estabilidade da conexão de rede e integridade dos pacotes de dados sob condições simuladas.</p>
+    </article>
+
+    <article class="card-diario">
+      <span class="card-data">Data: 15 Out 2024</span>
+      <h3>Telemetria de rover recebida com sucesso</h3>
+      <p>Nossa equipe validou o primeiro lote de dados de telemetria enviados pelo sistema embarcado, confirmando a estabilidade da conexão de rede e integridade dos pacotes de dados sob condições simuladas.</p>
+    </article>
+
+    <article class="card-diario">
+      <span class="card-data">Data: 15 Out 2024</span>
+      <h3>Telemetria de rover recebida com sucesso</h3>
+      <p>Nossa equipe validou o primeiro lote de dados de telemetria enviados pelo sistema embarcado, confirmando a estabilidade da conexão de rede e integridade dos pacotes de dados sob condições simuladas.</p>
+    </article>
+
+  </div>
   </section>
 
+   <!--equipe-->
   <section id="equipe" class="equipe">
-    <!--adicionar equipe-->
+    <h2>Equipe</h2>
+  <div class="cards-container">
+    
+    <div class="card-membro">
+      <div class="foto-placeholder"></div>
+      <h4>Dr. Elias Silva</h4>
+      <p>Eng. de Sistemas</p>
+    </div>
+
+    <div class="card-membro">
+      <div class="foto-placeholder"></div>
+      <h4>Dr. Elias Silva</h4>
+      <p>Eng. de Sistemas</p>
+    </div>
+
+    <div class="card-membro">
+      <div class="foto-placeholder"></div>
+      <h4>Dr. Elias Silva</h4>
+      <p>Eng. de Sistemas</p>
+    </div>
+
+    <div class="card-membro">
+      <div class="foto-placeholder"></div>
+      <h4>Dr. Elias Silva</h4>
+      <p>Eng. de Sistemas</p>
+    </div>
+
+    <div class="card-membro">
+      <div class="foto-placeholder"></div>
+      <h4>Dr. Elias Silva</h4>
+      <p>Eng. de Sistemas</p>
+    </div>
+
+  </div>
   </section>
 
-  <section id="form" class="form">
-    <!--adicionar formulário-->
-  </section>
+ <section id="contato" class="contato">
+    <form action="/enviar-dados" method="post">
 
-  <footer>
+      <div class="form-header">
+        <h2>Seja um Parceiro</h2>
+        <h3>Colabore com a Missão H.E.R.M.E.S.</h3>
+        <p>Se você ou sua empresa querem apoiar a próxima fronteira da exploração tecnológica, preencha o formulário abaixo.</p>
+      </div>
 
+      <div class="form-body">
+        
+        <div class="form-group">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required />
+        </div>
+
+        <div class="form-group">
+          <label for="empresa">Empresa / Instituição:</label>
+          <input type="text" id="empresa" name="empresa" placeholder="Digite o nome da empresa ou instituição" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="exemplo@empresa.com" required />
+        </div>
+
+        <div class="form-group">
+          <label for="apoio">Como você pode apoiar o HERMES?</label>
+          <select id="apoio" name="apoio" required>
+            <option value="" disabled selected hidden>Selecione uma opção</option>
+            <option value="financeiro">Apoio Financeiro / Patrocínio</option>
+            <option value="pecas">Fornecimento de Peças, Componentes ou Hardware</option>
+            <option value="usinagem">Usinagem / Manufatura de Peças</option>
+            <option value="mentoria">Mentoria Técnica / Outros</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="mensagem">Mensagem:</label>
+          <textarea id="mensagem" name="mensagem" placeholder="Conte-nos brevemente sobre sua empresa e como podemos colaborar." required></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">Enviar Mensagem</button>
+
+      </div>
+    </form>
+</section>
+
+  <footer class="main-footer">
+<div class="footer-container">
+    
+    <div class="footer-col">
+      <h2 class="footer-logo">H.E.R.M.E.S</h2>
+      <p class="footer-description">
+        Demonstrar ol Piqiia de componal. Demonstrstr ol Piqiia de componal, Demonstrstr ol Piqiia de componal.
+      </p>
+      <div class="footer-socials">
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h3>Localização</h3>
+      <p>Belo Horizonte, MG - Brasil</p>
+    </div>
+
+    <div class="footer-col">
+      <h3>Contato</h3>
+      <ul class="footer-contact-list">
+        <li>
+          <i class="fa-solid fa-phone"></i> 
+          <span>(31) 98888-7777</span>
+        </li>
+        <li>
+          <i class="fa-solid fa-envelope"></i> 
+          <span>exemplo@empresa.com</span>
+        </li>
+      </ul>
+    </div>
+
+  </div>
   </footer>
 
 
   <!-- 🌌 Fundo Galáxia -->
   <canvas id="starfield"></canvas>
+<<<<<<< HEAD
+  <script src="src/scripts/script.js"></script>
+=======
   <script src="src/scripts/script.js" defer></script>
+>>>>>>> main
 </body>
 
 </html>
