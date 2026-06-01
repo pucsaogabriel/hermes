@@ -867,37 +867,155 @@ canvas {
   .footer-contact-list li { justify-content: center; }
 }
 
-@media (max-width: 480px) {
-  .hero h1 { font-size: 3rem; }
-  .habilidades-grid { grid-template-columns: 1fr; }
-  .card-front { width: 15rem; height: 2rem; }
-  .card-back  { width: 16rem; height: 16rem; }
+/* ==========================================================================
+   RESPONSIVO
+   ========================================================================== */
+
+/* TABLET GRANDE / DESKTOP PEQUENO */
+@media (max-width: 1024px) {
+  .hero h1 { font-size: 8rem; }
+
+  .sobre-container { gap: 2rem; }
+
+  .equipe .cards-container,
+  #equipe-container { gap: 1.5rem; }
+
+  .card-membro { width: 160px; }
 }
 
-@media (min-width: 401px) and (max-width: 480px) {
-  .hero h1 { font-size: 4rem; }
-  .card-front { width: 17rem; height: 3rem; }
-  .card-back  { width: 18rem; height: 18rem; }
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-  .hero h1 { font-size: 4rem; }
-}
-
-@media (min-width: 768px) {
-  .hero { padding: 2rem; margin-top: 6rem; }
+/* TABLET */
+@media (max-width: 992px) {
   .hero h1 { font-size: 6rem; }
-  .hero p  { font-size: 1.5rem; max-width: 80%; margin-top: 2rem; }
-  .card-front { width: 24rem; height: 3rem; }
-  .card-back  { width: 27rem; height: 27rem; }
+
+  .diario .cards-container,
+  #diario-container { grid-template-columns: repeat(2, 1fr); }
+
+  .habilidades-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .missao-inner { grid-template-columns: repeat(2, 1fr); }
+
+  .objetivos-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .footer-container { gap: 2rem; }
 }
 
-@media (min-width: 1024px) {
+/* TABLET PEQUENO / MOBILE GRANDE */
+@media (max-width: 767px) {
+  /* navbar */
+  .nav-toggle { display: flex; }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    padding: 1.5rem 2rem;
+    gap: 1.5rem;
+  }
+
+  .nav-links.open { display: flex; }
+
+  /* hero */
+  .hero { padding: 2rem; margin-top: 4rem; }
+  .hero h1 { font-size: 4rem; margin-top: 8rem; }
+  .hero-subtitle { font-size: 1.2rem; }
+  .hero-tagline { font-size: 0.85rem; }
+
+  /* sobre */
+  .sobre { padding: 4rem 1.5rem; }
+  .sobre-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .sobre-imagem { order: -1; }
+
+  /* missão */
+  .missao { padding: 2rem 1.5rem; }
+  .missao-inner { grid-template-columns: 1fr; }
+
+  /* objetivos */
+  .objetivos { padding: 2rem 1.5rem; }
+  .objetivos-grid { grid-template-columns: 1fr; }
+
+  /* habilidades */
+  .habilidades { padding: 4rem 1.5rem; }
+  .habilidades-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* diário */
+  .diario { padding: 4rem 1.5rem; }
+  .diario .cards-container,
+  #diario-container { grid-template-columns: 1fr; }
+
+  /* equipe */
+  .equipe { padding: 4rem 1.5rem; }
+  .equipe .cards-container,
+  #equipe-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+  .card-membro { width: 100%; }
+
+  /* formulário */
+  .contato { padding: 4rem 1.5rem; }
+  .contato form { padding: 2rem 1.5rem; }
+
+  /* footer */
+  .footer-container {
+    flex-direction: column;
+    gap: 2.5rem;
+    text-align: center;
+  }
+  .footer-socials { justify-content: center; }
+  .footer-contact-list li { justify-content: center; }
+}
+
+/* MOBILE MÉDIO */
+@media (max-width: 480px) {
+  .hero h1 { font-size: 3rem; margin-top: 6rem; }
+  .hero-subtitle { font-size: 1rem; }
+
+  .habilidades-grid { grid-template-columns: 1fr; }
+
+  .equipe .cards-container,
+  #equipe-container { grid-template-columns: 1fr; }
+
+  .missao-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .objetivo-card { padding: 1.2rem; }
+
+  .contato form { padding: 1.5rem 1rem; }
+}
+
+/* MOBILE PEQUENO */
+@media (max-width: 360px) {
+  .hero h1 { font-size: 2.5rem; }
+  .nav-logo { font-size: 1rem; }
+  .card-membro { padding: 1.5rem 0.8rem; }
+}
+
+/* DESKTOP */
+@media (min-width: 1200px) {
   .hero h1 { font-size: 10rem; }
-  .hero p  { font-size: 2rem; max-width: 900px; margin-top: 1rem; }
+  .hero-subtitle { font-size: 2rem; }
+  .hero-tagline { font-size: 1rem; }
 }
 
+/* DESKTOP GRANDE */
 @media (min-width: 1800px) {
   .hero h1 { font-size: 13rem; margin-top: 4rem; }
-  .hero p  { font-size: 2.5rem; max-width: 900px; margin-top: 1rem; padding: 0; }
+  .hero-subtitle { font-size: 2.5rem; }
+  .hero-tagline { font-size: 1.1rem; }
+  .sobre-texto p { font-size: 1rem; }
+  .habilidade-card p { font-size: 0.95rem; }
+  .diario h2,
+  .equipe h2,
+  .habilidades .section-title { font-size: 2.5rem; }
 }
