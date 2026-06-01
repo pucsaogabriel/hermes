@@ -313,6 +313,129 @@ canvas {
   filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.15));
 }
 
+/* MISSÃO */
+.missao {
+  width: 100%;
+  max-width: 1200px;
+  padding: 3rem 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.missao h2 {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 700;
+  color: #FAF3D1;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.missao-inner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  text-align: left;
+}
+
+.missao-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.missao-icon {
+  width: 2rem;
+  height: 2rem;
+  color: #FAF3D1;
+  stroke-width: 1.5;
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.missao-item h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #FAF3D1;
+  margin-bottom: 0.5rem;
+}
+
+.missao-item p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.7;
+}
+
+/* OBJETIVOS */
+.objetivos {
+  width: 100%;
+  max-width: 1200px;
+  padding: 3rem 2rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.objetivos h2 {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 700;
+  color: #FAF3D1;
+  margin-bottom: 1rem;
+}
+
+.objetivos-intro {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.7;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.objetivos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.objetivo-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: background 0.3s ease;
+}
+
+.objetivo-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.objetivo-icon {
+  width: 1.8rem;
+  height: 1.8rem;
+  color: #FAF3D1;
+  stroke-width: 1.5;
+}
+
+.objetivo-card h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #FAF3D1;
+}
+
+.objetivo-card p {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+}
+
 /* ==========================================================================
    HABILIDADES
    ========================================================================== */
