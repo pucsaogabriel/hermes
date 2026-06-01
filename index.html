@@ -49,24 +49,32 @@
 
   <!-- SOBRE -->
   <section id="sobre" class="sobre">
+
+    <!-- Bloco principal: texto + imagem -->
     <div class="sobre-container">
       <div class="sobre-texto scroll-block">
         <h2>Sobre o Projeto</h2>
 
-        <h3>O que é o projeto?</h3>
-        <p>O Projeto H.E.R.M.E.S consiste no desenvolvimento de um carrinho inteligente para armazenamento, transporte e
-          gerenciamento de ferramentas utilizadas em ambientes técnicos, industriais e aeronáuticos. O sistema foi
-          projetado para otimizar processos operacionais, facilitar o acesso aos equipamentos necessários e melhorar a
-          organização das equipes de manutenção.</p>
+        <div class="sobre-item">
+          <h3><i data-lucide="info" class="sobre-icon"></i> O que é o projeto?</h3>
+          <p>O Projeto H.E.R.M.E.S consiste no desenvolvimento de um carrinho inteligente para armazenamento, transporte
+            e gerenciamento de ferramentas utilizadas em ambientes técnicos, industriais e aeronáuticos. O sistema foi
+            projetado para otimizar processos operacionais, facilitar o acesso aos equipamentos necessários e melhorar a
+            organização das equipes de manutenção.</p>
+        </div>
 
-        <h3>Qual problema o H.E.R.M.E.S resolve?</h3>
-        <p>Busca solucionar problemas relacionados à desorganização de ferramentas, perda de tempo durante operações de
-          manutenção e dificuldades no transporte de equipamentos. O sistema pretende tornar o ambiente de trabalho mais
-          organizado, seguro e produtivo.</p>
+        <div class="sobre-item">
+          <h3><i data-lucide="alert-circle" class="sobre-icon"></i> Qual problema resolve?</h3>
+          <p>Busca solucionar problemas relacionados à desorganização de ferramentas, perda de tempo durante operações
+            de manutenção e dificuldades no transporte de equipamentos. O sistema pretende tornar o ambiente de trabalho
+            mais organizado, seguro e produtivo.</p>
+        </div>
 
-        <h3>Para quem foi desenvolvido?</h3>
-        <p>Para profissionais e equipes que atuam nas áreas de manutenção, engenharia e suporte técnico, especialmente
-          em hangares, oficinas e ambientes industriais.</p>
+        <div class="sobre-item">
+          <h3><i data-lucide="users" class="sobre-icon"></i> Para quem foi desenvolvido?</h3>
+          <p>Para profissionais e equipes que atuam nas áreas de manutenção, engenharia e suporte técnico, especialmente
+            em hangares, oficinas e ambientes industriais.</p>
+        </div>
       </div>
 
       <div class="sobre-imagem scroll-block">
@@ -76,12 +84,25 @@
 
     <!-- MISSÃO -->
     <div class="missao scroll-block">
-      <h2>Nossa Missão</h2>
-      <p>Desenvolver uma solução inteligente capaz de otimizar a organização, o transporte e o gerenciamento de
-        ferramentas, promovendo maior eficiência operacional e praticidade em ambientes técnicos.</p>
-      <p class="missao-impacto">O H.E.R.M.E.S pretende gerar impactos positivos na produtividade e organização de
-        equipes técnicas, reduzindo atrasos operacionais, perdas de ferramentas e dificuldades logísticas durante
-        atividades de manutenção.</p>
+      <div class="missao-inner">
+        <div class="missao-item">
+          <i data-lucide="rocket" class="missao-icon"></i>
+          <div>
+            <h3>Nossa Missão</h3>
+            <p>Desenvolver uma solução inteligente capaz de otimizar a organização, o transporte e o gerenciamento de
+              ferramentas, promovendo maior eficiência operacional e praticidade em ambientes técnicos.</p>
+          </div>
+        </div>
+        <div class="missao-item">
+          <i data-lucide="trending-up" class="missao-icon"></i>
+          <div>
+            <h3>Nosso Impacto</h3>
+            <p>O H.E.R.M.E.S pretende gerar impactos positivos na produtividade e organização de equipes técnicas,
+              reduzindo atrasos operacionais, perdas de ferramentas e dificuldades logísticas durante atividades de
+              manutenção.</p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- OBJETIVOS -->
@@ -117,6 +138,7 @@
       <p class="sobre-rodape">O H.E.R.M.E.S representa a união entre engenharia, inovação e funcionalidade prática para
         melhorar processos operacionais em ambientes técnicos e industriais.</p>
     </div>
+
   </section>
 
 
@@ -129,32 +151,33 @@
     </div>
   </section>
 
-    <!--diario de bordo-->
+  <!--diario de bordo-->
   <section id="diario" class="diario">
-  <h2>Diário de Bordo e Atualizações</h2>
-  <div id="diario-container" class="cards-container">
-  </div>
-</section>
+    <h2>Diário de Bordo e Atualizações</h2>
+    <div id="diario-container" class="cards-container">
+    </div>
+  </section>
 
-   <!--equipe-->
-<section id="equipe" class="equipe">
-  <h2>Equipe</h2>
-  <div id="equipe-container" class="cards-container">
-    <!-- gerado dinamicamente pelo script.js -->
-  </div>
-</section>
+  <!--equipe-->
+  <section id="equipe" class="equipe">
+    <h2>Equipe</h2>
+    <div id="equipe-container" class="cards-container">
+      <!-- gerado dinamicamente pelo script.js -->
+    </div>
+  </section>
 
- <section id="contato" class="contato">
+  <section id="contato" class="contato">
     <form action="/enviar-dados" method="post">
 
       <div class="form-header">
         <h2>Seja um Parceiro</h2>
         <h3>Colabore com a Missão H.E.R.M.E.S.</h3>
-        <p>Se você ou sua empresa querem apoiar a próxima fronteira da exploração tecnológica, preencha o formulário abaixo.</p>
+        <p>Se você ou sua empresa querem apoiar a próxima fronteira da exploração tecnológica, preencha o formulário
+          abaixo.</p>
       </div>
 
       <div class="form-body">
-        
+
         <div class="form-group">
           <label for="nome">Nome</label>
           <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required />
@@ -162,7 +185,8 @@
 
         <div class="form-group">
           <label for="empresa">Empresa / Instituição:</label>
-          <input type="text" id="empresa" name="empresa" placeholder="Digite o nome da empresa ou instituição" required />
+          <input type="text" id="empresa" name="empresa" placeholder="Digite o nome da empresa ou instituição"
+            required />
         </div>
 
         <div class="form-group">
@@ -183,50 +207,51 @@
 
         <div class="form-group">
           <label for="mensagem">Mensagem:</label>
-          <textarea id="mensagem" name="mensagem" placeholder="Conte-nos brevemente sobre sua empresa e como podemos colaborar." required></textarea>
+          <textarea id="mensagem" name="mensagem"
+            placeholder="Conte-nos brevemente sobre sua empresa e como podemos colaborar." required></textarea>
         </div>
 
         <button type="submit" class="btn-submit">Enviar Mensagem</button>
 
       </div>
     </form>
-</section>
+  </section>
 
   <footer class="main-footer">
-<div class="footer-container">
-    
-    <div class="footer-col">
-      <h2 class="footer-logo">H.E.R.M.E.S</h2>
-      <p class="footer-description">
-        Demonstrar ol Piqiia de componal. Demonstrstr ol Piqiia de componal, Demonstrstr ol Piqiia de componal.
-      </p>
-      <div class="footer-socials">
-        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+    <div class="footer-container">
+
+      <div class="footer-col">
+        <h2 class="footer-logo">H.E.R.M.E.S</h2>
+        <p class="footer-description">
+          Demonstrar ol Piqiia de componal. Demonstrstr ol Piqiia de componal, Demonstrstr ol Piqiia de componal.
+        </p>
+        <div class="footer-socials">
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
       </div>
-    </div>
 
-    <div class="footer-col">
-      <h3>Localização</h3>
-      <p>Belo Horizonte, MG - Brasil</p>
-    </div>
+      <div class="footer-col">
+        <h3>Localização</h3>
+        <p>Belo Horizonte, MG - Brasil</p>
+      </div>
 
-    <div class="footer-col">
-      <h3>Contato</h3>
-      <ul class="footer-contact-list">
-        <li>
-          <i class="fa-solid fa-phone"></i> 
-          <span>(31) 98888-7777</span>
-        </li>
-        <li>
-          <i class="fa-solid fa-envelope"></i> 
-          <span>exemplo@empresa.com</span>
-        </li>
-      </ul>
-    </div>
+      <div class="footer-col">
+        <h3>Contato</h3>
+        <ul class="footer-contact-list">
+          <li>
+            <i class="fa-solid fa-phone"></i>
+            <span>(31) 98888-7777</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-envelope"></i>
+            <span>exemplo@empresa.com</span>
+          </li>
+        </ul>
+      </div>
 
-  </div>
+    </div>
   </footer>
 
 
