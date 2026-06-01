@@ -1,3 +1,7 @@
+document.addEventListener('DOMContentLoaded', () => {
+  lucide.createIcons();
+});
+
 // ==========================================================================
 // CANVAS — fundo estrelas
 // ==========================================================================
@@ -175,21 +179,20 @@ fetch('src/db/data.json')
   .then(res => res.json())
   .then(data => {
 
-    // ── 1. HABILIDADES ──────────────────────────────────────────────────────
-    // ícone via Font Awesome (ex: "fa-solid fa-code" no JSON)
     const grid = document.getElementById('habilidades-grid');
     if (grid && data.habilidades) {
       data.habilidades.forEach(item => {
         const card = document.createElement('div');
         card.classList.add('habilidade-card', 'scroll-block');
         card.innerHTML = `
-          <i class="${item.icone} habilidade-icon"></i>
+          <i data-lucide="${item.icone}" class="habilidade-icon"></i>
           <h3>${item.titulo}</h3>
           <p>${item.descricao}</p>
         `;
         grid.appendChild(card);
         observer.observe(card);
       });
+      lucide.createIcons();
     }
 
     // ── 2. DIÁRIO DE BORDO ──────────────────────────────────────────────────

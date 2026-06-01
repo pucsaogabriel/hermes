@@ -1,19 +1,40 @@
 {
   "habilidades": [
     {
-      "icone": "fa-solid fa-code",
-      "titulo": "Navegação Autônoma",
-      "descricao": "Desenvolvimento de algoritmos para desvio de obstáculos e mapeamento de terreno em tempo real."
+      "id": 1,
+      "titulo": "Mobilidade Operacional",
+      "descricao": "Sistema desenvolvido para facilitar o transporte de ferramentas em ambientes técnicos e industriais.",
+      "icone": "truck"
     },
     {
-      "icone": "fa-solid fa-satellite-dish",
-      "titulo": "Telemetria e Redes",
-      "descricao": "Protocolos robustos de comunicação e transmissão de pacotes de dados em ambientes severos."
+      "id": 2,
+      "titulo": "Organização Inteligente",
+      "descricao": "Compartimentos planejados para melhorar o armazenamento e o acesso rápido aos equipamentos.",
+      "icone": "layout-dashboard"
     },
     {
-      "icone": "fa-solid fa-microchip",
-      "titulo": "Sistemas Embarcados",
-      "descricao": "Integração de hardware e sensores utilizando microcontroladores de alta confiabilidade."
+      "id": 3,
+      "titulo": "Gerenciamento de Ferramentas",
+      "descricao": "Possibilidade de controle e monitoramento das ferramentas utilizadas durante operações.",
+      "icone": "wrench"
+    },
+    {
+      "id": 4,
+      "titulo": "Estrutura Adaptável",
+      "descricao": "Projeto com capacidade de adaptação para diferentes tipos de ferramentas e necessidades operacionais.",
+      "icone": "settings"
+    },
+    {
+      "id": 5,
+      "titulo": "Integração Tecnológica",
+      "descricao": "Base preparada para futuras implementações de sensores e sistemas automatizados.",
+      "icone": "cpu"
+    },
+    {
+      "id": 6,
+      "titulo": "Suporte à Manutenção",
+      "descricao": "Auxílio direto às equipes técnicas, reduzindo tempo operacional e aumentando a produtividade.",
+      "icone": "tool"
     }
   ],
   "diario": [
@@ -37,33 +58,33 @@
     }
   ],
   "equipe": [
-  {
-    "id": 1,
-    "nome": "Augusto Vaz",
-    "curso": "Engenharia Aeronáutica",
-    "foto": "src/assets/images/Augusto.jpeg",
-    "linkedin": "https://www.linkedin.com/in/augusto-vaz-2a07b92b1?utm_source=share_via&utm_content=profile&utm_medium=member_android"
-  },
-  {
-    "id": 2,
-    "nome": "Gustavo Sossai",
-    "curso": "Engenharia Aeronáutica",
-    "foto": "src/assets/images/Gustavo.jpeg",
-    "linkedin": "https://www.linkedin.com/in/gustavo-sossai-395498338?utm_source=share_via&utm_content=profile&utm_medium=member_android"
-  },
-  {
-    "id": 3,
-    "nome": "Julia Souza",
-    "curso": "Engenharia Aeronáutica",
-    "foto": "src/assets/images/Julia.jpeg",
-    "linkedin": "https://www.linkedin.com/in/julia-souza-6649b1338?utm_source=share_via&utm_content=profile&utm_medium=member_android"
-  },
-  {
-    "id": 4,
-    "nome": "Lucas de Sá",
-    "curso": "Engenharia Aeronáutica",
-    "foto": "src/assets/images/Lucas.jpeg",
-    "linkedin": ":https://www.linkedin.com/in/lucas-de-sa-moreira?utm_source=share_via&utm_content=profile&utm_medium=member_android"
-  }
-]
+    {
+      "id": 1,
+      "nome": "Augusto Vaz",
+      "curso": "Engenharia Aeronáutica",
+      "foto": "src/assets/images/Augusto.jpeg",
+      "linkedin": "https://www.linkedin.com/in/augusto-vaz-2a07b92b1?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+    },
+    {
+      "id": 2,
+      "nome": "Gustavo Sossai",
+      "curso": "Engenharia Aeronáutica",
+      "foto": "src/assets/images/Gustavo.jpeg",
+      "linkedin": "https://www.linkedin.com/in/gustavo-sossai-395498338?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+    },
+    {
+      "id": 3,
+      "nome": "Julia Souza",
+      "curso": "Engenharia Aeronáutica",
+      "foto": "src/assets/images/Julia.jpeg",
+      "linkedin": "https://www.linkedin.com/in/julia-souza-6649b1338?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+    },
+    {
+      "id": 4,
+      "nome": "Lucas de Sá",
+      "curso": "Engenharia Aeronáutica",
+      "foto": "src/assets/images/Lucas.jpeg",
+      "linkedin": ":https://www.linkedin.com/in/lucas-de-sa-moreira?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+    }
+  ]
 }
