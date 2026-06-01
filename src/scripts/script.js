@@ -1,9 +1,6 @@
-// LUCIDE - inicializa ícones estáticos do HTML
-document.addEventListener('DOMContentLoaded', () => {
-  lucide.createIcons();
-});
-
-// CANVAS - configuração
+// ==========================================================================
+// CANVAS — fundo estrelas
+// ==========================================================================
 const canvas = document.getElementById("starfield");
 const ctx = canvas.getContext("2d");
 
@@ -126,7 +123,10 @@ resizeCanvas();
 setTimeout(createShootingStar, Math.random() * 20000 + 20000);
 animate();
 
+
+// ==========================================================================
 // NAVBAR
+// ==========================================================================
 const navbar = document.querySelector('.navbar');
 window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 50);
@@ -134,11 +134,29 @@ window.addEventListener('scroll', () => {
 
 const toggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
+
 toggle.addEventListener('click', () => {
   navLinks.classList.toggle('open');
 });
 
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', (e) => {
+    navLinks.classList.remove('open');
+    const targetId = link.getAttribute('href');
+    if (targetId.startsWith('#')) {
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        e.preventDefault();
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  });
+});
+
+
+// ==========================================================================
 // SCROLL ANIMATION
+// ==========================================================================
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) entry.target.classList.add('show');
@@ -149,24 +167,70 @@ document.querySelectorAll('.scroll-block').forEach(el => {
   observer.observe(el);
 });
 
-// HABILIDADES - carrega do JSON
+
+// ==========================================================================
+// FETCH ÚNICO — habilidades + diário + equipe
+// ==========================================================================
 fetch('src/db/data.json')
   .then(res => res.json())
   .then(data => {
+
+    // ── 1. HABILIDADES ──────────────────────────────────────────────────────
+    // ícone via Font Awesome (ex: "fa-solid fa-code" no JSON)
     const grid = document.getElementById('habilidades-grid');
+    if (grid && data.habilidades) {
+      data.habilidades.forEach(item => {
+        const card = document.createElement('div');
+        card.classList.add('habilidade-card', 'scroll-block');
+        card.innerHTML = `
+          <i class="${item.icone} habilidade-icon"></i>
+          <h3>${item.titulo}</h3>
+          <p>${item.descricao}</p>
+        `;
+        grid.appendChild(card);
+        observer.observe(card);
+      });
+    }
 
-    data.habilidades.forEach(item => {
-      const card = document.createElement('div');
-      card.classList.add('habilidade-card', 'scroll-block');
-      card.innerHTML = `
-        <i data-lucide="${item.icone}" class="habilidade-icon"></i>
-        <h3>${item.titulo}</h3>
-        <p>${item.descricao}</p>
-      `;
-      grid.appendChild(card);
-      observer.observe(card);
-    });
+    // ── 2. DIÁRIO DE BORDO ──────────────────────────────────────────────────
+    const diarioContainer = document.getElementById('diario-container');
+    if (diarioContainer && data.diario) {
+      data.diario.forEach(post => {
+        const artigo = document.createElement('article');
+        artigo.classList.add('card-diario', 'scroll-block');
+        artigo.innerHTML = `
+          <span class="card-data">Data: ${post.data}</span>
+          <h3>${post.titulo}</h3>
+          <p>${post.descricao}</p>
+        `;
+        diarioContainer.appendChild(artigo);
+        observer.observe(artigo);
+      });
+    }
 
-    // inicializa ícones após inserir cards no DOM
-    lucide.createIcons();
-  });
+    // ── 3. EQUIPE ───────────────────────────────────────────────────────────
+    const equipeContainer = document.getElementById('equipe-container');
+    if (equipeContainer && data.equipe) {
+      data.equipe.forEach(membro => {
+        const card = document.createElement('div');
+        card.classList.add('card-membro', 'scroll-block');
+
+        const fotoHTML = membro.foto
+          ? `<img src="${membro.foto}" alt="${membro.nome}" class="foto-membro">`
+          : `<div class="foto-placeholder"></div>`;
+
+        card.innerHTML = `
+          ${fotoHTML}
+          <h4>${membro.nome}</h4>
+          <p>${membro.curso}</p>
+          <a href="${membro.linkedin}" target="_blank" class="linkedin-link" aria-label="LinkedIn ${membro.nome}">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+          </a>
+        `;
+        equipeContainer.appendChild(card);
+        observer.observe(card);
+      });
+    }
+
+  })
+  .catch(err => console.error("Erro ao carregar data.json:", err));
