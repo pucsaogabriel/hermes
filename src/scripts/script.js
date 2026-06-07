@@ -2,9 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   lucide.createIcons();
 });
 
-// ==========================================================================
 // CANVAS — fundo estrelas
-// ==========================================================================
 const canvas = document.getElementById("starfield");
 const ctx = canvas.getContext("2d");
 
@@ -128,9 +126,7 @@ setTimeout(createShootingStar, Math.random() * 20000 + 20000);
 animate();
 
 
-// ==========================================================================
 // NAVBAR
-// ==========================================================================
 const navbar = document.querySelector('.navbar');
 window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 50);
@@ -158,9 +154,7 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 });
 
 
-// ==========================================================================
 // SCROLL ANIMATION
-// ==========================================================================
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) entry.target.classList.add('show');
@@ -171,10 +165,8 @@ document.querySelectorAll('.scroll-block').forEach(el => {
   observer.observe(el);
 });
 
-
-// ==========================================================================
 // FETCH ÚNICO — habilidades + diário + equipe
-// ==========================================================================
+
 fetch('src/db/data.json')
   .then(res => res.json())
   .then(data => {
