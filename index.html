@@ -16,6 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
 </head>
 
 <body>
@@ -48,14 +49,15 @@
 
 
 
-  <!-- SOBRE -->
+   <!-- SOBRE -->
   <section id="sobre" class="sobre">
-
-    <!-- Bloco principal: texto + imagem -->
+ 
+    <!-- Bloco principal: texto + modelo 3D -->
     <div class="sobre-container">
+ 
       <div class="sobre-texto scroll-block">
         <h2>Sobre o Projeto</h2>
-
+ 
         <div class="sobre-item">
           <h3><i data-lucide="info" class="sobre-icon"></i> O que é o projeto?</h3>
           <p>O Projeto H.E.R.M.E.S consiste no desenvolvimento de um carrinho inteligente para armazenamento, transporte
@@ -63,25 +65,34 @@
             projetado para otimizar processos operacionais, facilitar o acesso aos equipamentos necessários e melhorar a
             organização das equipes de manutenção.</p>
         </div>
-
+ 
         <div class="sobre-item">
           <h3><i data-lucide="alert-circle" class="sobre-icon"></i> Qual problema resolve?</h3>
           <p>Busca solucionar problemas relacionados à desorganização de ferramentas, perda de tempo durante operações
             de manutenção e dificuldades no transporte de equipamentos. O sistema pretende tornar o ambiente de trabalho
             mais organizado, seguro e produtivo.</p>
         </div>
-
+ 
         <div class="sobre-item">
           <h3><i data-lucide="users" class="sobre-icon"></i> Para quem foi desenvolvido?</h3>
           <p>Para profissionais e equipes que atuam nas áreas de manutenção, engenharia e suporte técnico, especialmente
             em hangares, oficinas e ambientes industriais.</p>
         </div>
       </div>
-
+ 
+      <!-- modelo 3D — dentro do sobre-container para ficar no grid -->
       <div class="sobre-imagem scroll-block">
-        <img src="src/assets/images/imageteste.png" alt="H.E.R.M.E.S" />
+        <model-viewer
+          src="src/assets/models/hermes3d.glb"
+          auto-rotate
+          camera-controls
+          shadow-intensity="1"
+          rotation-per-second="30deg"
+          style="width: 100%; height: 450px; background: transparent;"
+        ></model-viewer>
       </div>
-    </div>
+ 
+    </div><!-- fim .sobre-container -->
 
     <!-- MISSÃO -->
     <div class="missao scroll-block">
@@ -104,14 +115,14 @@
           </div>
         </div>
       </div>
-    </div>
+    </div>  
 
-    <!-- OBJETIVOS -->
+     <!-- OBJETIVOS -->
     <div class="objetivos scroll-block">
       <h2>Nossos Objetivos de Desenvolvimento</h2>
       <p class="objetivos-intro">O principal objetivo é desenvolver um sistema móvel e inteligente que auxilie equipes
         técnicas no armazenamento, transporte e gerenciamento eficiente de ferramentas.</p>
-
+ 
       <div class="objetivos-grid">
         <div class="objetivo-card">
           <i data-lucide="target" class="objetivo-icon"></i>
@@ -135,11 +146,11 @@
           <p>Incorporar sensores inteligentes, rastreamento de ferramentas e integração com sistemas automatizados.</p>
         </div>
       </div>
-
+ 
       <p class="sobre-rodape">O H.E.R.M.E.S representa a união entre engenharia, inovação e funcionalidade prática para
         melhorar processos operacionais em ambientes técnicos e industriais.</p>
     </div>
-
+ 
   </section>
 
 
