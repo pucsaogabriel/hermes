@@ -307,6 +307,20 @@ model-viewer {
   --poster-color: transparent;
 }
 
+@media (max-width: 767px) {
+  model-viewer {
+    width: 100%;
+    height: 300px;
+    min-height: 300px;
+    display: block;
+  }
+
+  .sobre-imagem {
+    width: 100%;
+    min-height: 300px;
+  }
+}
+
 /* MISSÃO */
 .missao {
   width: 100%;
