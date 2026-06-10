@@ -229,3 +229,45 @@ fetch('src/db/data.json')
 
   })
   .catch(err => console.error("Erro ao carregar data.json:", err));
+
+// FORMULÁRIO
+const contatoForm = document.getElementById('contato-form');
+const feedback = document.getElementById('form-feedback');
+
+contatoForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const btn = contatoForm.querySelector('.btn-submit');
+  btn.textContent = 'Enviando...';
+  btn.disabled = true;
+
+  try {
+    const res = await fetch(contatoForm.action, {
+      method: 'POST',
+      body: new FormData(contatoForm),
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (res.ok) {
+      feedback.textContent = '✓ Mensagem enviada com sucesso! Entraremos em contato em breve.';
+      feedback.className = 'form-feedback sucesso';
+      feedback.style.display = 'block';
+      contatoForm.reset();
+      btn.textContent = 'Enviar Mensagem';
+      btn.disabled = false;
+    } else {
+      throw new Error('Erro no envio');
+    }
+  } catch {
+    feedback.textContent = '✗ Erro ao enviar. Tente novamente ou entre em contato diretamente.';
+    feedback.className = 'form-feedback erro';
+    feedback.style.display = 'block';
+    btn.textContent = 'Enviar Mensagem';
+    btn.disabled = false;
+  }
+
+  // Esconde o feedback após 5 segundos
+  setTimeout(() => {
+    feedback.style.display = 'none';
+  }, 5000);
+});
