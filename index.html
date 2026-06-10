@@ -179,55 +179,60 @@
   </section>
 
   <section id="contato" class="contato">
-    <form action="/enviar-dados" method="post">
+  <form id="contato-form" action="https://formsubmit.co/testehermes2026@gmail.com" method="POST">
 
-      <div class="form-header">
-        <h2>Seja um Parceiro</h2>
-        <h3>Colabore com a Missão H.E.R.M.E.S.</h3>
-        <p>Se você ou sua empresa querem apoiar a próxima fronteira da exploração tecnológica, preencha o formulário
-          abaixo.</p>
+    <!-- Configurações FormSubmit -->
+    <input type="hidden" name="_subject" value="Novo Parceiro - H.E.R.M.E.S">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+
+    <div class="form-header">
+      <h2>Seja um Parceiro</h2>
+      <h3>Colabore com a Missão H.E.R.M.E.S.</h3>
+      <p>Se você ou sua empresa querem apoiar a próxima fronteira da exploração tecnológica, preencha o formulário abaixo.</p>
+    </div>
+
+    <div class="form-body">
+
+      <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required />
       </div>
 
-      <div class="form-body">
-
-        <div class="form-group">
-          <label for="nome">Nome</label>
-          <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required />
-        </div>
-
-        <div class="form-group">
-          <label for="empresa">Empresa / Instituição:</label>
-          <input type="text" id="empresa" name="empresa" placeholder="Digite o nome da empresa ou instituição"
-            required />
-        </div>
-
-        <div class="form-group">
-          <label for="email">E-mail</label>
-          <input type="email" id="email" name="email" placeholder="exemplo@empresa.com" required />
-        </div>
-
-        <div class="form-group">
-          <label for="apoio">Como você pode apoiar o HERMES?</label>
-          <select id="apoio" name="apoio" required>
-            <option value="" disabled selected hidden>Selecione uma opção</option>
-            <option value="financeiro">Apoio Financeiro / Patrocínio</option>
-            <option value="pecas">Fornecimento de Peças, Componentes ou Hardware</option>
-            <option value="usinagem">Usinagem / Manufatura de Peças</option>
-            <option value="mentoria">Mentoria Técnica / Outros</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="mensagem">Mensagem:</label>
-          <textarea id="mensagem" name="mensagem"
-            placeholder="Conte-nos brevemente sobre sua empresa e como podemos colaborar." required></textarea>
-        </div>
-
-        <button type="submit" class="btn-submit">Enviar Mensagem</button>
-
+      <div class="form-group">
+        <label for="empresa">Empresa / Instituição</label>
+        <input type="text" id="empresa" name="empresa" placeholder="Digite o nome da empresa ou instituição" required />
       </div>
-    </form>
-  </section>
+
+      <div class="form-group">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="exemplo@empresa.com" required />
+      </div>
+
+      <div class="form-group">
+        <label for="apoio">Como você pode apoiar o HERMES?</label>
+        <select id="apoio" name="apoio" required>
+          <option value="" disabled selected hidden>Selecione uma opção</option>
+          <option value="financeiro">Apoio Financeiro / Patrocínio</option>
+          <option value="pecas">Fornecimento de Peças, Componentes ou Hardware</option>
+          <option value="usinagem">Usinagem / Manufatura de Peças</option>
+          <option value="mentoria">Mentoria Técnica / Outros</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" placeholder="Conte-nos brevemente sobre sua empresa e como podemos colaborar." required></textarea>
+      </div>
+
+      <button type="submit" class="btn-submit">Enviar Mensagem</button>
+
+      <!-- Feedback de envio -->
+      <div id="form-feedback" class="form-feedback" style="display:none;"></div>
+
+    </div>
+  </form>
+</section>
 
   <footer class="main-footer">
     <div class="footer-container">
