@@ -271,3 +271,13 @@ contatoForm.addEventListener('submit', async (e) => {
     feedback.style.display = 'none';
   }, 5000);
 });
+
+// MODELO 3D — ajusta velocidade no mobile
+const modelViewer = document.querySelector('model-viewer');
+if (modelViewer) {
+  if (window.innerWidth <= 767) {
+    modelViewer.setAttribute('rotation-per-second', '8deg');
+  } else {
+    modelViewer.setAttribute('rotation-per-second', '30deg');
+  }
+}

@@ -301,23 +301,27 @@ canvas {
 
 /* MODELO 3D */
 model-viewer {
-  width: 100%;
-  height: 400px;
-  background: transparent;
+  width: 65%;
+  height: 340px;
+  margin: 0 auto;
+  display: block;
+  background: radial-gradient(ellipse at center, #0a1428 0%, #000000 100%);
   --poster-color: transparent;
+  border-radius: 12px;
 }
 
 @media (max-width: 767px) {
   model-viewer {
-    width: 100%;
-    height: 300px;
-    min-height: 300px;
+    width: 65%;
+    height: 280px;
+    min-height: 280px;
     display: block;
+    margin: 0 auto;
   }
 
   .sobre-imagem {
     width: 100%;
-    min-height: 300px;
+    min-height: 280px;
   }
 }
 
