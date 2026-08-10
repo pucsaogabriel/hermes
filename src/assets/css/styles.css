@@ -789,6 +789,21 @@ model-viewer {
   margin-bottom: 1.5rem;
 }
 
+.creditos a {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.creditos a:hover { color: #FAF3D1; }
+
+.footer-description {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
 .footer-socials { display: flex; gap: 1rem; }
 
 .footer-socials a {
